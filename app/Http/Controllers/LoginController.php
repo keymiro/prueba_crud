@@ -8,6 +8,6 @@ class LoginController extends Controller
 {
     public function index($id){
         session(['token' =>$id]);
-      return  $token = session()->get('token');
+        return redirect()->route('users.index');
     }
 }
